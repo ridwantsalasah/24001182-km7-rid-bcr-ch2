@@ -1,0 +1,20 @@
+body{
+    font-family: "Helvetica","Arial", sans-serif;
+}
+
+
+.btn-success{
+    background-color: #5CB85F !important;
+}
+
+
+li svg {
+    margin-right: 10px;
+}
+
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: rgb(80, 78, 78) !important;
+}
+.carousel-indicators [data-bs-target] {
+    background-color:  rgb(80, 78, 78) !important;
+}

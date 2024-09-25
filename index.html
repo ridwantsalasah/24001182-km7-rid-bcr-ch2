@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Challenge Chapter 1</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" 
+    crossorigin="anonymous">
+
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
+
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <!-- AOS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
+
+    <!-- CSS -->
+    <link href="../src/styles/style.css" rel="stylesheet">
+
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top" style="background-color: #F1F3FF;">
+        <div class="container">
+            <a class="navbar-brand px-4 bg-primary text-primary" href="#">LOGO</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">BCR</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#ourservices">Our Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#whyus">Why Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#testimonial">Testimonial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn btn-success">Register</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section" style="background-color: #F1F3FF;">
+        <div class="container pt-5 mb-5">
+            <div class="row align-items-center">
+                <div class="col-md-6 pt-5" data-aos="fade-up" data-aos-duration="1500">
+                    <h1 class="mb-4 display-md-1 text-md-start fw-semibold">Sewa & Rental Mobil Terbaik di kawasan Jakarta</h1>
+                    <p class="fs-5">Selamat datang di Binar Car Rental. Kami menyediakan mobil kualitas terbaik dengan 
+                        harga terjangkau. Selalu siap melayani kebutuhanmu untuk sewa mobil selama 24 jam.</p>
+                    <div class="mb-3">
+                        <a href="cariMobil.html" class="btn btn-success">Mulai Sewa Mobil</a>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="zoom-in"  data-aos-duration="1500">
+                    <img src="../src/public/assets/img_car.png" alt="Car Image" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Our Services Section -->
+    <section id="ourservices" class="ourservice-section mt-5">
+        <div class="container py-5 mb-5" data-aos="fade-up" data-aos-duration="2000">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="../src/public/assets/img_service.png" alt="Service Image" class="img-fluid">
+                </div>
+                <div class="col-md-6 pt-5">
+                    <h1 class="mb-4 display-md-1 text-md-start fw-semibold">Best Car Rental for any kind of trip in Jakarta!</h1>
+                    <p class="fs-6">Sewa mobil di Jakarta bersama Binar Car Rental jaminan harga lebih murah dibandingkan yang lain, kondisi mobil baru, serta kualitas pelayanan terbaik untuk perjalanan wisata, bisnis, wedding, meeting, dll.
+                    </p>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#CFD4ED"/>
+                                <path d="M17.3333 8L9.99996 15.3333L6.66663 12" stroke="#0D28A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Sewa Mobil Dengan Supir di Bali 12 Jam
+                        </li>
+                        <li class="mb-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#CFD4ED"/>
+                                <path d="M17.3333 8L9.99996 15.3333L6.66663 12" stroke="#0D28A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Sewa Mobil Lepas Kunci di Bali 24 Jam
+                        </li>
+                        <li class="mb-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#CFD4ED"/>
+                                <path d="M17.3333 8L9.99996 15.3333L6.66663 12" stroke="#0D28A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Sewa Mobil Jangka Panjang Bulanan
+                        </li>
+                        <li class="mb-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#CFD4ED"/>
+                                <path d="M17.3333 8L9.99996 15.3333L6.66663 12" stroke="#0D28A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Gratis Antar - Jemput Mobil di Bandara
+                        </li>
+                        <li class="mb-3">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="12" cy="12" r="12" fill="#CFD4ED"/>
+                                <path d="M17.3333 8L9.99996 15.3333L6.66663 12" stroke="#0D28A6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg> 
+                            Layanan Airport Transfer / Drop In Out
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Us Section -->
+    <section id="whyus">
+        <div class="container py-5">
+            <div class="my-3 text-center text-sm-start" data-aos="slide-right" data-aos-duration="1500">
+                <h2 class="fw-semibold">Why Us?</h2>
+                <p class="text-muted mt-3">Mengapa harus pilih Binar Car Rental?</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Card 1: Mobil Lengkap -->
+                <div class="col-md-3">
+                    <div class="card h-100 border-1" data-aos="fade-up"
+                    data-aos-duration="1000">
+                        <div class="card-body">
+                            <div class="my-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#F9CC00"/>
+                                    <path d="M11.8333 24.3333H9.33329C8.89127 24.3333 8.46734 24.1577 8.15478 23.8452C7.84222 23.5326 7.66663 23.1087 7.66663 22.6667V16.8333C7.66663 16.3913 7.84222 15.9674 
+                                    8.15478 15.6548C8.46734 15.3423 8.89127 15.1667 9.33329 15.1667H11.8333M17.6666 13.5V10.1667C17.6666 9.50362 17.4032 8.86774 16.9344 8.3989C16.4656 7.93006 15.8297 7.66666 15.1666 7.66666L11.8333 
+                                    15.1667V24.3333H21.2333C21.6352 24.3379 22.0253 24.197 22.3315 23.9367C22.6378 23.6763 22.8397 23.3141 22.9 22.9167L24.05 15.4167C24.0862 15.1778 24.0701 14.9339 24.0027 14.7019C23.9354 14.4698 23.8184 
+                                    14.2552 23.6598 14.0729C23.5013 13.8906 23.305 13.7449 23.0846 13.646C22.8642 13.5471 22.6249 13.4973 22.3833 13.5H17.6666Z" 
+                                    stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                            </div>
+                            <h5 class="card-title py-2 fw-semibold">Mobil Lengkap</h5>
+                            <p class="card-text">Tersedia banyak pilihan mobil, kondisi masih baru, bersih dan terawat</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Harga Murah -->
+                <div class="col-md-3">
+                    <div class="card h-100 border-1" data-aos="fade-up"
+                    data-aos-duration="1250">
+                        <div class="card-body">
+                            <div class="my-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#FA2C5A"/>
+                                    <path d="M23.1583 17.175L17.1833 23.15C17.0285 23.305 16.8447 23.4279 16.6424 23.5118C16.44 23.5956 16.2232 23.6388 16.0041 23.6388C15.7851 23.6388 15.5682 23.5956 15.3659 23.5118C15.1636 23.4279 14.9797 23.305 14.825 23.15L7.66663 16V7.66666H16L23.1583 14.825C23.4687 15.1373 23.6429 15.5597 23.6429 16C23.6429 16.4403 23.4687 16.8627 23.1583 17.175V17.175Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M11.8334 11.8333H11.8417" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>                                    
+                            </div>
+                            <h5 class="card-title py-2 fw-semibold">Harga Murah</h5>
+                            <p class="card-text">Harga murah dan bersaing, bisa bandingkan harga kami dengan rental mobil lain</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Layanan 24 Jam -->
+                <div class="col-md-3">
+                    <div class="card h-100 border-1" data-aos="fade-up"
+                    data-aos-duration="1500">
+                        <div class="card-body">
+                            <div class="my-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                                    <path d="M16 24.3333C20.6023 24.3333 24.3333 20.6024 24.3333 16C24.3333 11.3976 20.6023 7.66666 16 7.66666C11.3976 7.66666 7.66663 11.3976 7.66663 16C7.66663 20.6024 11.3976 24.3333 16 24.3333Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M16 11V16L19.3333 17.6667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </div>
+                            <h5 class="card-title py-2 fw-semibold">Layanan 24 Jam</h5>
+                            <p class="card-text">Siap melayani kebutuhan Anda selama 24 jam nonstop. Kami juga tersedia di akhir minggu</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4: Sopir Profesional -->
+                <div class="col-md-3">
+                    <div class="card h-100 border-1" data-aos="fade-up"
+                    data-aos-duration="2000">
+                        <div class="card-body">
+                            <div class="my-3">
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="16" cy="16" r="16" fill="#5CB85F"/>
+                                    <path d="M16.0001 18.5C19.2217 18.5 21.8334 15.8883 21.8334 12.6667C21.8334 9.44501 19.2217 6.83334 16.0001 6.83334C12.7784 6.83334 10.1667 9.44501 10.1667 12.6667C10.1667 15.8883 12.7784 18.5 16.0001 18.5Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M12.8416 17.575L11.8333 25.1667L15.9999 22.6667L20.1666 25.1667L19.1583 17.5667" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                    
+                            </div>
+                            <h5 class="card-title py-2 fw-semibold">Sopir Profesional</h5>
+                            <p class="card-text">Sopir yang profesional, berpengalaman, jujur, ramah dan selalu tepat waktu</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <!-- Testimonial Section -->
+    <section id="testimonial" class="testimonial-section py-5" >
+      <div class="container text-center mt-3">
+        <div data-aos="slide-right" data-aos-duration="1600">
+          <h2 class="fw-semibold">Testimonial</h2>
+          <p>Berbagai review positif dari para pelanggan kami</p>
+        </div>
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <!-- First Testimonial -->
+            <div class="carousel-item active">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card p-4" style="background-color: #dfd9d9; border: none;">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <img src="../src/public/assets/img_photo.png" class="rounded-circle" alt="Client Image 1">
+                      </div>
+                      <div class="col-md-9 text-start">
+                        <div class="mb-2">
+                          <span class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </span>
+                        </div>
+                        <p>
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        </p>
+                        <p><strong>John Dee 32, Bromo</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Second Testimonial -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card p-4" style="background-color: #dfd9d9; border: none;">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <img src="../src/public/assets/img_photo_1.png" class="rounded-circle" alt="Client Image 2">
+                      </div>
+                      <div class="col-md-9 text-start">
+                        <div class="mb-2">
+                          <span class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </span>
+                        </div>
+                        <p>
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        </p>
+                        <p><strong>John Dee 32, Bromo</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Third Testimonial -->
+            <div class="carousel-item">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <div class="card p-4" style="background-color: #dfd9d9; border: none;">
+                    <div class="row align-items-center">
+                      <div class="col-md-3">
+                        <img src="../src/public/assets/img_photo_1.png" class="rounded-circle" alt="Client Image 3">
+                      </div>
+                      <div class="col-md-9 text-start">
+                        <div class="mb-2">
+                          <span class="text-warning">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                          </span>
+                        </div>
+                        <p>
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        </p>
+                        <p><strong>John Dee 32, Bromo</strong></p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Carousel Controls -->
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-controls text-center mt-4">
+            <button class="carousel-control-prev d-lg-inline d-none" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            
+            <button class="carousel-control-next d-lg-inline d-none" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>          
+        </div>
+      </div>
+    </section>
+
+    <!-- Sewa Section   -->
+    <section class="py-5">
+      <div class="container text-center text-white rounded" data-aos="fade-up" data-aos-duration="1000">
+          <div class="py-5 rounded" style="background-color: #0D28A6 !important;"">
+              <h1>Sewa Mobil di Jakarta Sekarang</h1>
+              <p class="my-5 px-3">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                  sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+              <a href="#" class="btn btn-success">Mulai Sewa Mobil</a>
+          </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-5" id="faq">
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-lg-5 mb-4 text-center text-sm-start" data-aos="fade-up" data-aos-duration="1200">
+            <h3 class="fw-semibold">Frequently Asked Question</h3>
+            <p class="my-3">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <div class="accordion" id="accordionExample">
+              <!-- Question 1 -->
+              <div class="accordion-item mb-4" data-aos="fade-up" data-aos-duration="1200">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                    Apa saja syarat yang dibutuhkan?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Question 2 -->
+              <div class="accordion-item mb-4" data-aos="fade-up" data-aos-duration="1500">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Berapa hari minimal sewa mobil lepas kunci?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Question 3 -->
+              <div class="accordion-item mb-4" data-aos="fade-up" data-aos-duration="1800">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Berapa hari sebelumnya sebaiknya booking sewa mobil?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Question 4 -->
+              <div class="accordion-item mb-4" data-aos="fade-up" data-aos-duration="2000">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Apakah ada biaya antar-jemput?
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+              <!-- Question 5 -->
+              <div class="accordion-item mb-4" data-aos="fade-up" data-aos-duration="2200">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed border" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    Bagaimana jika terjadi kecelakaan?
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+   <!-- Footer Section -->
+    <footer class="py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <!-- Address Section -->
+          <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+            <p>Jalan Suroyo No. 161 Mayangan Kota Probolinggo 672000</p>
+            <p>binarcarrental@gmail.com</p>
+            <p>081-233-334-808</p>
+          </div>
+          <!-- Services Section -->
+          <div class="col-md-6 col-lg-3 mb-3 mb-md-0">
+            <p>Our services</p>
+            <ul class="list-unstyled">
+              <li><a href="#whyus" class="text-dark fw-semibold text-decoration-none">Why Us</a></li>
+              <li><a href="#testimonial" class="text-dark fw-semibold text-decoration-none">Testimonial</a></li>
+              <li><a href="#faq" class="text-dark fw-semibold text-decoration-none">FAQ</a></li>
+            </ul>
+          </div>
+          <!-- Social Media Section -->
+          <div class="col-md-12 col-lg-3 mb-3 mb-md-0">
+            <p>Connect with us</p>
+            <div class="d-flex flex-wrap">
+              <a href="#" class="me-3 mb-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                  <path d="M21 7.66663H18.5C17.395 7.66663 16.3352 8.10561 15.5538 8.88701C14.7724 9.66842 14.3334 10.7282 14.3334 11.8333V14.3333H11.8334V17.6666H14.3334V24.3333H17.6667V17.6666H20.1667L21 14.3333H17.6667V11.8333C17.6667 11.6123 17.7545 11.4003 17.9108 11.244C18.0671 11.0878 18.279 11 18.5 11H21V7.66663Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" class="me-3 mb-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                  <path d="M20.1666 7.66663H11.8333C9.53211 7.66663 7.66663 9.53211 7.66663 11.8333V20.1666C7.66663 22.4678 9.53211 24.3333 11.8333 24.3333H20.1666C22.4678 24.3333 24.3333 22.4678 24.3333 20.1666V11.8333C24.3333 9.53211 22.4678 7.66663 20.1666 7.66663Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M19.3334 15.475C19.4362 16.1685 19.3178 16.8769 18.9948 17.4992C18.6719 18.1215 18.161 18.6262 17.5347 18.9414C16.9085 19.2566 16.1987 19.3663 15.5065 19.2549C14.8143 19.1436 14.1748 18.8167 13.6791 18.321C13.1833 17.8252 12.8565 17.1857 12.7451 16.4935C12.6337 15.8013 12.7434 15.0916 13.0586 14.4653C13.3739 13.8391 13.8785 13.3281 14.5009 13.0052C15.1232 12.6823 15.8315 12.5638 16.525 12.6667C17.2325 12.7716 17.8874 13.1012 18.3931 13.6069C18.8988 14.1126 19.2285 14.7676 19.3334 15.475Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M20.5834 11.4166H20.5917" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" class="me-3 mb-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                  <path d="M25.1667 8.49996C24.3687 9.06285 23.4851 9.49338 22.55 9.77496C22.0482 9.19788 21.3812 8.78887 20.6392 8.60323C19.8973 8.41759 19.1163 8.46429 18.4018 8.737C17.6873 9.00972 17.0737 9.49529 16.6442 10.1281C16.2146 10.7608 15.9898 11.5102 16 12.275V13.1083C14.5356 13.1463 13.0844 12.8215 11.7759 12.1628C10.4673 11.5042 9.34197 10.5322 8.50004 9.33329C8.50004 9.33329 5.16671 16.8333 12.6667 20.1666C10.9505 21.3316 8.906 21.9157 6.83337 21.8333C14.3334 26 23.5 21.8333 23.5 12.25C23.4993 12.0178 23.477 11.7863 23.4334 11.5583C24.2839 10.7195 24.8841 9.66055 25.1667 8.49996V8.49996Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" class="me-3">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                  <path d="M9.33329 9.33337H22.6666C23.5833 9.33337 24.3333 10.0834 24.3333 11V21C24.3333 21.9167 23.5833 22.6667 22.6666 22.6667H9.33329C8.41663 22.6667 7.66663 21.9167 7.66663 21V11C7.66663 10.0834 8.41663 9.33337 9.33329 9.33337Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M24.3333 11L16 16.8333L7.66663 11" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                  
+              </a>
+              <a href="#" class="mb-2">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="16" cy="16" r="16" fill="#0D28A6"/>
+                  <path d="M19.3333 15.1666V11.8333M23.5 7.66663H8.5V21H12.6667V24.3333L16 21H20.1667L23.5 17.6666V7.66663ZM15.1667 15.1666V11.8333V15.1666Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          <!-- Copyright Section -->
+          <div class="col-md-12 col-lg-3 text-md-start mb-3 mb-md-0">
+            <p>Copyright Binar 2022</p>
+            <svg width="100" height="34" viewBox="0 0 100 34" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="34" fill="#0D28A6"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous">
+    </script>
+    
+    <!-- AOS JS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+</body>
+</html>
