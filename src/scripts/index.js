@@ -41,7 +41,7 @@ async function searchCarContent(tanggal, jumlahPenumpang) {
     // Create and display car cards
     let carContentHTML = data.map((car) => {
         return `
-            <div class="col-md-4">
+            <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="card shadow-sm h-100">
                     <img src="${car.image}" class="card-img-top" alt="Car Image" style="height:250px; width: 100%; object-fit: cover;">
                     <div class="card-body">
