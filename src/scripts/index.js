@@ -95,7 +95,6 @@ const getCarData = async () => {
             const randomTime = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
             return randomTime.toISOString().split('T')[0]; // Format to YYYY-MM-DD
         };
-        console.log(cars)
         // Set today's date
         const today = new Date();
         // Set 2 weeks from now (14 days)
