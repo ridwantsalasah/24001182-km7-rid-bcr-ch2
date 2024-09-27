@@ -3,6 +3,9 @@ const carContent = document.getElementById('card-content');
 const searchForm = document.querySelector('form');
 const submitButton = searchForm.querySelector('button[type="submit"]');
 
+// Store cars with random dates
+let carsWithRandomDates = [];
+
 // Function to check the form validity and update the button state
 function updateButtonState() {
     const isFormValid = searchForm.checkValidity(); // Check if the form is valid
@@ -29,17 +32,22 @@ searchForm.addEventListener('submit', async (event) => {
 async function searchCarContent(tanggal, jumlahPenumpang) {
     carContent.innerHTML = '<h1>Loading...</h1>'; // Show loading message
 
-    const data = await getCarData(tanggal, jumlahPenumpang);
-    const maxCapacity = Math.max(...data.map(car => car.capacity)); // Find maximum capacity
-    if (jumlahPenumpang <= 0 || jumlahPenumpang > maxCapacity) {
+    const data = await getCarData(); // Fetch car data
+    const filteredData = data.filter(car => {
+        const availableAt = new Date(car.availableAt); // Convert availableAt to Date object
+        return jumlahPenumpang <= car.capacity && availableAt.getTime() === tanggal.getTime(); // Show cars available on the selected date or after
+    });
+
+    // Check if there are filtered cars
+    if (filteredData.length === 0) {
         carContent.innerHTML = `<h1 class="text-center">No cars available for the selected criteria</h1>`;
         return;
     }
 
-    data.sort((a, b) => a.capacity - b.capacity);
+    filteredData.sort((a, b) => a.capacity - b.capacity);
 
     // Create and display car cards
-    let carContentHTML = data.map((car) => {
+    let carContentHTML = filteredData.map((car) => {
         return `
             <div class="col-md-4" data-aos="fade-up" data-aos-duration="1000">
                 <div class="card shadow-sm h-100">
@@ -71,8 +79,13 @@ async function searchCarContent(tanggal, jumlahPenumpang) {
     carContent.innerHTML = carContentHTML;
 }
 
-// Async function to fetch and filter car data from cars.json
-const getCarData = async (tanggal, jumlahPenumpang) => {
+// Async function to fetch car data from cars.json and assign random dates if necessary
+const getCarData = async () => {
+    // Check if cars data with random dates already exists
+    if (carsWithRandomDates.length > 0) {
+        return carsWithRandomDates; // Return already fetched cars
+    }
+
     try {
         const response = await fetch('../src/public/data/cars.json');
         const cars = await response.json();
@@ -82,28 +95,23 @@ const getCarData = async (tanggal, jumlahPenumpang) => {
             const randomTime = new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
             return randomTime.toISOString().split('T')[0]; // Format to YYYY-MM-DD
         };
-
+        console.log(cars)
         // Set today's date
         const today = new Date();
-        // Set 1 month from now
-        const oneMonthLater = new Date();
-        oneMonthLater.setMonth(today.getMonth() + 1);
+        // Set 2 weeks from now (14 days)
+        const twoWeeksLater = new Date();
+        twoWeeksLater.setDate(today.getDate() + 14);
 
-        // Assign random available date to each car and filter based on input
-        const filteredData = cars.filter((car) => {
-            // Generate a random available date for the car
-            car.availableAt = randomDate(today, oneMonthLater); 
-
-            const availableAt = new Date(car.availableAt); // Convert availableAt to Date object
-
-            // Compare the date selected by the user with the random available date of the car
-            return (
-                jumlahPenumpang <= car.capacity && availableAt.getTime() == tanggal.getTime() // Show cars available on the selected date or after
-            );
+        // Assign random available date to each car
+        const updatedCars = cars.map(car => {
+            car.availableAt = randomDate(today, twoWeeksLater);
+            return car;
         });
 
-        filteredData.sort((a, b) => a.capacity - b.capacity); // Sort based on capacity
-        return filteredData;
+        // Store cars with their random dates
+        carsWithRandomDates = updatedCars;
+
+        return carsWithRandomDates;
 
     } catch (error) {
         console.error('Error fetching car data:', error);
@@ -111,6 +119,5 @@ const getCarData = async (tanggal, jumlahPenumpang) => {
     }
 };
 
-
 // Show all car data initially
-searchCarContent();
+carContent.innerHTML = '<h1 class="text-center">Welcome! Please search for available cars</h1>'; // Initial message
